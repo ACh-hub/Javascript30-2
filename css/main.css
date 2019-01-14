@@ -3,11 +3,23 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: white;
+  font-family: 'Sriracha', cursive;
 }
 
 header {
-  background-color: black;
+  background-color: gray;
   height: 10vh;
+}
+
+header .javascript {
+  font-family: 'Sriracha', cursive;
+  font-size: 6rem;
+}
+
+header .day {
+  font-size: 5rem;
+  font-family: 'Yellowtail', cursive;
 }
 
 footer {
@@ -23,8 +35,8 @@ main {
 main .container .clock {
   width: 20rem;
   height: 20rem;
-  border: 5px solid white;
-  margin: 0 auto;
+  border: 3px solid white;
+  margin: auto;
   border-radius: 50%;
   position: relative;
   padding: 2rem;
@@ -54,12 +66,13 @@ main .container .clock .clock-face .dot {
 }
 
 main .container .clock .clock-face .mark {
-  height: 2px;
+  height: 3px;
   background: red;
   width: 3%;
   position: absolute;
   -webkit-transform-origin: 1100%;
           transform-origin: 1100%;
+  border-radius: 50%;
   top: 50%;
   right: 100%;
   z-index: 0;
