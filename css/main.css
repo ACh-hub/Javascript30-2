@@ -27,11 +27,39 @@ main .container .clock .clock-face {
           transform: translateY(-3px);
 }
 
-main .container .clock .clock-face .hand {
+main .container .clock .clock-face .hour-hand {
   width: 50%;
   height: 6px;
   background: black;
   position: absolute;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
   top: 50%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+main .container .clock .clock-face .min-hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  top: 50%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+main .container .clock .clock-face .second-hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  top: 50%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
 }
 /*# sourceMappingURL=main.css.map */

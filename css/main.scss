@@ -1,3 +1,12 @@
+@mixin hand-general() {
+    width: 50%;
+    height:6px;
+    background: black;
+    position: absolute;
+    transform-origin: 100%;
+    top: 50%;
+}
+
 * {
     margin:0;
     padding:0;
@@ -21,17 +30,22 @@ main {
                 width: 100%;
                 height: 100%;
                 transform: translateY(-3px);
-                .dot{
-                    
+          
+                .hour-hand{
+                    @include hand-general();
+                    transform: rotate(30deg);
                 }
-                .hand{
-                    width: 50%;
-                    height:6px;
-                    background: black;
-                    position: absolute;
-                    top: 50%;
+
+                .min-hand{
+                    @include hand-general();
+                    transform: rotate(20deg);
                 }
-                
+
+                .second-hand{
+                    @include hand-general();
+                    transform: rotate(10deg);
+                }
+         
             }
             
             
