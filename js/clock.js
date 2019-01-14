@@ -21,12 +21,15 @@ const clock = {
 (function drawClockface(){
     const clockFace = document.querySelector('.clock-face');
 
-    for(let i=0; i<360; i+=30){
+    const angles = [0,47,91,130,153,168,180,192,207,228,265,310];
+
+    angles.forEach(element => {
         let mark = document.createElement('div');
         mark.classList.add('mark');
-        mark.style.transform=`rotate(${i}deg)`;
+        mark.style.transform=`rotate(${element}deg)`;
         clockFace.appendChild(mark);
-    }
+
+    });
 
 })();
 

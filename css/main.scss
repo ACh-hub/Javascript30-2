@@ -1,11 +1,32 @@
+@mixin coloredShadow($color){
+    box-shadow: inset 0px 0px 2px $color,
+    0px 0px 10px $color,
+    0px 0px 15px $color,
+    0px 0px 20px $color;
+}
+
+@mixin coloredInAndOutShadow($color){
+    box-shadow: 
+    inset 0px 0px 2px $color,
+    inset 0px 0px 10px $color,
+    inset 0px 0px 15px $color,
+    inset 0px 0px 20px $color,
+    0px 0px 2px $color,
+    0px 0px 10px $color,
+    0px 0px 15px $color,
+    0px 0px 20px $color;
+}
+
 @mixin hand-general() {
-    height:6px;
-    background: black;
+    height:5px;
+    background: white;
     position: absolute;
     border-radius: 50%;
     transform-origin: 0%;
     top: 50%;
-    left: 50%
+    left: 50%;
+    z-index: 2;
+    @include coloredShadow(blue);
 }
 
 * {
@@ -14,24 +35,38 @@
     box-sizing: border-box;
 }
 
+header {
+    background-color: black;
+    height: 10vh;
+}
+
+footer {
+    background-color: black;
+    height: 10vh;
+}
+
 main {
-    background-color: aquamarine;
+    background-color: black;
+    height: 80vh;
 
     .container {
+
         .clock{
-            width: 30rem;
-            height: 30rem;
-            border: 10px solid white;
-            border-radius: 10%;
-            margin: 50px auto;
+            width: 20rem;
+            height: 20rem;
+            border: 5px solid white;
+            margin: 0 auto;
+            border-radius: 50%;
             position: relative;
             padding: 2rem;
+            @include coloredInAndOutShadow(blue);
         
             .clock-face{
                 position: relative;
                 width: 100%;
                 height: 100%;
                 transform: translateY(-3px);
+                
 
                 .dot{
                     height: 2%;
@@ -41,19 +76,20 @@ main {
                     border-radius: 50%;
                     top:50%;
                     right:49%;
-                    z-index: 1;
+                    z-index: 3;
+                    @include coloredShadow(red);
                 }
 
                 .mark{
-                    height:2px;
+                    height: 2px;
                     background: red;
-                    width:5%;
+                    width:3%;
                     position: absolute;
-                    border-radius: 50%;
                     transform-origin: 1100%;
                     top:50%;
                     right:100%;
-                    z-index: -1;
+                    z-index: 0;
+                    @include coloredShadow(red);
                 }
           
                 .hour-hand{
